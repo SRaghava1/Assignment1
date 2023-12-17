@@ -1,0 +1,42 @@
+<div>
+
+  <app-delete-button [selectedRows]="selectedRows" (deleteRows)="deleteSelectedRows()"></app-delete-button>
+
+  <table cdkDropList>
+    <!-- Table headers here -->
+    <tr class="ui-sortable-handle">
+      <th (click)="sort('id')">
+
+        <span *ngIf="sortedColumn === 'id'">&uarr;&darr;</span>
+      </th>
+      <th (click)="sort('username')">
+        username
+        <span *ngIf="sortedColumn === 'username'">&uarr;&darr;</span>
+      </th>
+      <th (click)="sort('email')">
+        Email
+        <span *ngIf="sortedColumn === 'email'">&uarr;&darr;</span>
+      </th>
+      <th (click)="sort('phone')">
+        Phone
+        <span *ngIf="sortedColumn === 'phone'">&uarr;&darr;</span>
+      </th>
+
+    </tr>
+    <tbody cdkDropList (cdkDropListDropped)="onDrop($event)">
+      <!-- Table rows here -->
+      <tr *ngFor="let row of data; let i = index" cdkDrag>
+        <td>
+
+          <input type="checkbox" (change)="toggleRowSelection(i)" [checked]="isRowSelected(i)" />
+        </td>
+
+        <td>{{ row.username }}</td>
+        <td>{{ row.email }}</td>
+        <td>{{ row.phone }}</td>
+
+
+
+      </tr>
+  </table>
+</div>

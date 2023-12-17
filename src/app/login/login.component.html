@@ -1,0 +1,33 @@
+<div class="container">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center;">Welcome back </mat-card-title>
+
+
+    <form #loginForm="ngForm" fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="login(loginForm)">
+      <mat-form-field>
+        <label for="username">Username:</label>
+        <input matInput placeholder="Username" type="text" class="form-control w-50 m-2" id="username" ngModel
+          name="username" #un="ngModel" required>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <div><label for="password">Password:</label>
+          <input matInput type="password" placeholder="Password" minlength="8" id="password" name="password" ngModel
+            required>
+        </div>
+      </mat-form-field>
+
+      <div>
+        <div> <a class="black-text" href="#">Forgot Password?</a> </div>
+        <div><button mat-raised-button color="primary" type="submit">Submit</button></div>
+      </div>
+    </form>
+  </mat-card>
+</div>
+
+
+
+<div class="additional-text" fxLayout="column" fxLayoutAlign="center center">
+  <p>Digital Platform for Distance learning</p>
+</div>
