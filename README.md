@@ -1,3 +1,15 @@
+How to run:-
+
+Please checkout to master branch
+Run "npm install"
+Run "ng serve"
+
+Login details:-
+Username:- user
+Password:- Password@123
+
+
+
 # YourProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
